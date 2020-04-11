@@ -57,8 +57,8 @@
         return floor($ventilators);
     }
 
-    function estimateDollarsInFlight ($infections, $avgIncome, $days) {
-        $dailyLose = round($infections * (65 / 100) * $avgIncome) / $days;
+    function estimateDollarsInFlight ($infections, $avgIncome, $avgIncomePopulation, $days) {
+        $dailyLose = $infections * $avgIncomePopulation * $avgIncome / $days;
 
         return floor($dailyLose);
     }
