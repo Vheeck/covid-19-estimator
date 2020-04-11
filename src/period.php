@@ -20,9 +20,9 @@
     }
 
     function factor ($days) {
-        $factor = floor($days / 3);
+        $factor = $days / 3;
 
-        return $factor;
+        return floor($factor);
     }
 
     function estimateInfections ($factor, $currentlyInfected) {
@@ -32,35 +32,35 @@
     }
 
     function estimateSevereCases ($infections) {
-        $severeCases = floor($infections * (15 / 100));
+        $severeCases = $infections * (15 / 100);
 
-        return $severeCases;
+        return floor($severeCases);
     }
 
     function estimateHospitalBeds ($totalHospitalBeds, $severeCases) {
-        $availableBeds = round($totalHospitalBeds * (35 / 100));
+        $availableBeds = $totalHospitalBeds * (35 / 100);
 
         $availableBedsForCases = $availableBeds - $severeCases;
 
-        return $availableBedsForCases;
+        return floor($availableBedsForCases);
     }
 
     function estimateRequiredICUs ($infections) {
-        $ICUs = floor($infections * (5 / 100));
+        $ICUs = $infections * (5 / 100);
 
-        return $ICUs;
+        return floor($ICUs);
     }
 
     function estimateRequiredVentilators ($infections) {
-        $Ventilators = floor($infections * (2 / 100));
+        $ventilators = $infections * (2 / 100);
 
-        return $Ventilators;
+        return floor($ventilators);
     }
 
     function estimateDollarsInFlight ($infections, $avgIncome, $days) {
-        $dailyLose = floor($infections * (65 / 100) * $avgIncome / $days);
+        $dailyLose = $infections * (65 / 100) * $avgIncome / $days;
 
-        return $dailyLose;
+        return floor($dailyLose);
     }
 
 ?>
