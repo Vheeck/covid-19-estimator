@@ -34,7 +34,7 @@
     function estimateSevereCases ($infections) {
         $severeCases = $infections * (15 / 100);
 
-        return floor($severeCases);
+        return round($severeCases);
     }
 
     function estimateHospitalBeds ($totalHospitalBeds, $severeCases) {
@@ -42,25 +42,25 @@
 
         $availableBedsForCases = $availableBeds - $severeCases;
 
-        return floor($availableBedsForCases);
+        return round($availableBedsForCases);
     }
 
     function estimateRequiredICUs ($infections) {
         $ICUs = $infections * (5 / 100);
 
-        return floor($ICUs);
+        return round($ICUs);
     }
 
     function estimateRequiredVentilators ($infections) {
         $ventilators = $infections * (2 / 100);
 
-        return floor($ventilators);
+        return round($ventilators);
     }
 
     function estimateDollarsInFlight ($infections, $avgIncome, $days) {
         $dailyLose = $infections * (65 / 100) * $avgIncome / $days;
 
-        return floor($dailyLose);
+        return round($dailyLose);
     }
 
 ?>
