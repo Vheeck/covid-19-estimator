@@ -40,7 +40,7 @@
     function estimateHospitalBeds ($severeCases, $totalHospitalBeds) {
         $availableBeds = floor($totalHospitalBeds * (35 / 100));
 
-        $availableBedsForCases = $availableBeds - $severeCases;
+        $availableBedsForCases = $severeCases - $availableBeds;
 
         return $availableBedsForCases;
     }
