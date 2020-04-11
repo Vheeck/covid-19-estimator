@@ -69,5 +69,9 @@ function covid19ImpactEstimator($data)
 
   $severeImpact["dollarsInFlight"] = estimateDollarsInFlight($severeImpact["infectionsByRequestedTime"], $region["avgDailyIncomeInUSD"], $days);
 
-  return $data;
+  return [
+    "data" => $data,
+    "impact" => $impact,
+    "severeImpact" => $severeImpact,
+  ];
 }
