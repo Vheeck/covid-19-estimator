@@ -5,7 +5,7 @@ require 'period.php';
 function covid19ImpactEstimator($data)
 {
   // DESTRUCTURING
-
+  
   $region = $data["region"];
   $periodType = $data["periodType"];
   $timeToElapse = $data["timeToElapse"];
