@@ -42,7 +42,7 @@
 
         $availableBedsForCases = $availableBeds - $severeCases;
 
-        return $availableBedsForCases;
+        return ceil($availableBedsForCases);
     }
 
     function estimateRequiredICUs ($infections) {
