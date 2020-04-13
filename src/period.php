@@ -38,11 +38,11 @@
     }
 
     function estimateHospitalBeds ($totalHospitalBeds, $severeCases) {
-        $availableBeds = ceil($totalHospitalBeds * (35 / 100));
+        $availableBeds = round($totalHospitalBeds * (35 / 100));
 
         $availableBedsForCases = $availableBeds - $severeCases;
 
-        return ceil($availableBedsForCases);
+        return $availableBedsForCases;
     }
 
     function estimateRequiredICUs ($infections) {
