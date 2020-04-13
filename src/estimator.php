@@ -2,8 +2,8 @@
 
 require 'period.php';
 
-function covid19ImpactEstimator($data)
-{
+function covid19ImpactEstimator($data) {
+  
   // DESTRUCTURING
   
   $region = $data["region"];
