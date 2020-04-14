@@ -1,5 +1,4 @@
 <?php
-
     function toDays ($type, $time) {
         switch ($type) {
             case 'days':
